@@ -1,0 +1,495 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3B035D;
+  font-family: Poppins, sans-serif;
+}
+
+nav {
+  z-index: 99;
+  position: relative;position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2F004F;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+}
+
+.logo{
+  padding: 2rem 2rem;
+  font-size: 30px;
+  margin-left: 4rem;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin-right: 3rem;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 2s;
+}
+nav ul li a:hover {
+  color: #D55D92;
+}
+
+nav.stroke ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+h2 {
+font-family: 'Arvo', serif;
+color: #DEC9E9;
+text-align: center;
+margin-bottom: 1em;
+font-size: 45px;
+text-shadow: 1px 3px 2px #973AA8;
+-webkit-text-shadow: 2px 7px 6px 1px rgba(0,0,0,0.22);
+-moz-text-shadow: 2px 7px 6px 1px rgba(0,0,0,0.22);
+}
+
+.container {
+  display: grid;
+  margin-bottom: 2em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px 1px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "cert1 cert2 cert3"
+    "cert4 cert5 cert6"
+    "cert7 cert8 cert9"
+    "cert10 cert11 cert12"
+    "cert13 cert14 cert15"
+    "cert16 cert17 cert18"
+    "cert19 cert20 cert21"
+    "cert22 cert23 cert24";
+}
+
+.cert {
+  height: 70vh;
+  width: 30vw;
+  border-radius: 5px;
+  margin: auto;
+  background: linear-Gradient(130deg, rgb(255,255,255, 0.10) , rgb(255,255,255, 0.30) );
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.2);
+    }
+
+.cert1 { grid-area: cert1;}
+.cert2 { grid-area: cert2; }
+.cert3 { grid-area: cert3; }
+.cert4 { grid-area: cert4; }
+.cert5 { grid-area: cert5; }
+.cert6 { grid-area: cert6; }
+.cert7 { grid-area: cert7; }
+.cert8 { grid-area: cert8; }
+.cert9 { grid-area: cert9; }
+.cert10 { grid-area: cert10; }
+.cert11 { grid-area: cert11; }
+.cert12 { grid-area: cert12; }
+.cert13 { grid-area: cert13; }
+.cert14 { grid-area: cert14; }
+.cert15 { grid-area: cert15; }
+
+.cert h4 {
+  color:  white;
+  text-align: center;
+  padding: 0 15px;
+  margin:  15px 0;
+}
+.cert img {
+  display: absolute;
+  width: 28vw;
+  height:45vh;
+  box-shadow: 2px 7px 6px 1px rgba(0,0,0,0.22);
+  -webkit-box-shadow: 2px 7px 6px 1px rgba(0,0,0,0.22);
+  -moz-box-shadow: 2px 7px 6px 1px rgba(0,0,0,0.22);
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  padding-top: 5px;
+}
+
+.cert img:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+  position: relative;
+  z-index: 99;
+}
+
+.report-button {
+  padding: 8px;
+  border: 2px solid #47126B;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+}
+
+
+.btn {
+ color: #fff;
+ text-decoration: none;
+ padding-left: 10px;
+}
+
+
+.report-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(71,18,107,0.4);
+  transition: all 0.8s;
+}
+.report-button:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.report-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.report-button:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+
+/*******************************************************LAPTOPS******************************************************/
+@media only screen and (max-width: 1085px) {
+  .report-button {
+    margin-top: 2px;
+  }
+
+  .cert img {
+    height:43vh;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+
+
+  .container {
+    display: grid;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    gap: 20px 1px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cert1 cert2"
+      "cert3 cert4"
+      "cert5 cert6"
+      "cert7 cert8"
+      "cert9 cert10"
+      "cert11 cert12"
+      "cert13 cert14"
+      "cert15 cert16"
+      "cert17 cert18"
+      "cert19 cert20"
+      "cert21 cert22"
+      "cert23 cert24"
+      "cert25 cert26";
+  }
+
+  .cert {
+    border: 3px solid #530879;
+    height: 70vh;
+    width: 45vw;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  .cert img {
+    width:40vw;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .hamburger {
+        margin-right: 2rem;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #47056B;
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+        text-align: center;
+        padding: 2rem 0;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        font-size: 1rem;
+    }
+
+    .nav-menu li {
+      padding: 3rem 0;
+    }
+
+    .nav-menu.active {
+      left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+         opacity: 0;
+     }
+
+     .hamburger.active .bar:nth-child(1) {
+         transform: translateY(8px) rotate(45deg);
+     }
+
+     .hamburger.active .bar:nth-child(3) {
+         transform: translateY(-8px) rotate(-45deg);
+     }
+
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cert {
+    height: 85vh;
+    width: 90vw;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+
+  .cert4 ,
+  .cert5 ,
+  .cert6{
+    height: 90vh;
+  }
+
+  .cert h4 {
+    font-size: 1rem;
+  }
+  .cert img {
+    float: left;
+    margin-left: 5%;
+    width: 90%;
+    height: 73%;
+    margin-bottom: 30px;
+  }
+
+  .report-button {
+    padding: 9px 0 0 1px;
+    width: 35%;
+    height: 7%;
+    margin-top: 24.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .cert4 .report-button ,
+  .cert5 .report-button,
+  .cert6 .report-button {
+      margin-top: 25rem;
+  }
+
+  .cert7 .report-button,
+  .cert8 .report-button,
+  .cert9 .report-button {
+    margin-top: 24rem;
+  }
+
+.rbtn {
+  margin-top: 29.2em;
+}
+}
+
+@media only screen and (max-width: 550px) {
+
+  .cert {
+    height: 73vh;
+    width: 93vw;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+
+  .cert4 ,
+  .cert5 ,
+  .cert6{
+    height: 75vh;
+  }
+
+
+  .cert h4 {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+ .cert img {
+      margin-bottom: 10px;
+      height: 50vh;
+  }
+
+  .report-button {
+    padding: 2px;
+    width: 40%;
+    height: 9%;
+    margin-top: 23.5em;
+    padding-top: 1em;
+  }
+
+  .rbtn {
+    margin-top: 23em;
+  }
+
+  .rbtn2 {
+    margin-top: 22.6em;
+  }
+
+  h2 {
+  font-size: 30px;
+
+  }
+
+}
+
+@media only screen and (max-width: 532px) {
+
+  .cert {
+    height: 69vh;
+      }
+
+  .cert img {
+    width: 82vw;
+    height:45vh;
+    padding-top: 2px;
+  }
+
+  .report-button {
+    margin-top: 25rem;
+}
+
+.cert4 .report-button ,
+.cert5 .report-button,
+.cert6 .report-button,
+.cert7 .report-button,
+.cert8 .report-button,
+.cert9 .report-button {
+    margin-top: 22rem;
+}
+}
+
+
+@media only screen and (max-width: 389px) {
+
+  .cert img {
+    height:40vh;
+  }
+
+  .container{
+    margin: 0 0.2em 0 -0.3em;
+  }
+
+  .report-button {
+    margin-top: 16rem;
+    height: 3.5rem;
+}
+
+
+.cert4 .report-button ,
+.cert5 .report-button,
+.cert6 .report-button,
+.cert7 .report-button,
+.cert8 .report-button,
+.cert9 .report-button {
+    margin-top: 16.5rem;
+}

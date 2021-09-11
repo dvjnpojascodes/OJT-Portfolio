@@ -1,0 +1,396 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3B035D;
+  font-family: Poppins, sans-serif;
+  height: 100vh;
+}
+
+nav {
+  z-index: 99;
+  position: relative;position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2F004F;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+}
+
+.logo{
+  padding: 2rem 2rem;
+  font-size: 30px;
+  margin-left: 1em;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin-right: 3rem;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 2s;
+}
+nav ul li a:hover {
+  color: #D55D92;
+}
+
+nav.stroke ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 1px;
+  grid-auto-flow: columns;
+  grid-template-areas:
+    "cert1 cert2 " ;
+  color: #fff;
+  margin-top: -5em;
+}
+
+.info {
+  margin-left: 5em;
+  margin-top: -2em;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typewriter h2 {
+  width: 20ch;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  letter-spacing: 1.5px;
+  animation: typing 2s steps(22),
+             blink .5s step-end infinite alternate;
+}
+
+
+/*typing effect*/
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+/*cursor effect*/
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.content h2 {
+  font-size: 50px;
+  margin-top: 10rem;
+  margin-bottom: -9rem;
+}
+
+
+.info p {
+  margin-top: 12rem;
+  margin-bottom: 2.5rem;
+  width: 90%;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.info img {
+  margin-top: -50px;
+}
+
+.soc-med a {
+  color: #fff;
+  padding-top: 2em;
+  margin-right: 1em;
+  font-size:30px;
+}
+
+.soc-med a:hover {
+  color: #DAC3E8;
+}
+
+
+button {
+  height: 2rem;
+  margin-top: 3rem;
+  padding: 5px 25px;
+  border: 1px solid #fff;
+  background:  #3B035D;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: 2s;
+  font-size: 15px;
+}
+
+
+button:hover {
+  background: #fff;
+  color: #3B035D;
+  letter-spacing: 3px;
+  font-weight: bolder;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-top: 3em;
+  font-size: 15px;
+  color: #6D1888;
+  padding: 10px;
+  text-align: center;
+  background: #2F004F;
+}
+
+/**************************************************laptops**************************************************/
+
+@media only screen and (max-width: 1125px) {
+  .info {
+    margin-top: -4em;
+    margin-left: 1.8em;
+  }
+
+  img {
+    height: 93%;
+    width: 93%;
+    margin-top: 2em;
+    margin-left: 1em;
+  }
+
+}
+
+/*******************************************  Tablets and Mobile ******************************************/
+
+@media only screen and (max-width: 1020px) {
+  img {
+    height: 100%;
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  .logo{
+    padding: 2rem 1rem;
+    font-size: 25px;
+    margin-left: 1em;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 5px 0 0;
+  }
+
+  .info {
+    margin-top: -3em;
+    margin-left: 3em;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .content h2 {
+    font-size: 35px;
+    margin-top: 10rem;
+    margin-bottom: -9rem;
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .hamburger {
+        margin-right: 2rem;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #47056B;
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+        text-align: center;
+        padding: 2rem 0;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        font-size: 1rem;
+    }
+
+    .nav-menu li {
+      padding: 3rem 0;
+    }
+
+    .nav-menu.active {
+      left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+         opacity: 0;
+     }
+
+     .hamburger.active .bar:nth-child(1) {
+         transform: translateY(8px) rotate(45deg);
+     }
+
+     .hamburger.active .bar:nth-child(3) {
+         transform: translateY(-8px) rotate(-45deg);
+     }
+
+  img {
+    display: none;
+  }
+
+  .info {
+    margin-top: 1em;
+    margin-left: 1.5em;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-left: 0.6rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: -10rem 2rem 0 2.5rem;
+    color: #fff;
+    padding-bottom: 2em;
+  }
+
+  .typewriter h2 {
+    width: 20ch;
+  }
+
+  .content h2 {
+    font-size: 35px;
+    margin-top: 10rem 0.6rem -9rem;
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .content {
+    margin: -10rem 1rem 0 -1em;
+    padding-bottom: 6rem;
+  }
+
+  .content h2 {
+    font-size: 19px;
+    margin: 10em 0 0 0;
+  }
+
+
+  .typewriter h2 {
+    margin: 1.3em 0 0 0;
+    width: 21.5ch;
+  }
+
+  .info p {
+    font-size: 15px;
+    margin-top: 2em;
+  }
+
+
+  .soc-med a {
+    color: #fff;
+    padding-top: 2em;
+    margin-right: 1em;
+    font-size:25px;
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+  }
+
+}
