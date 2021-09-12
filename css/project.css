@@ -99,7 +99,7 @@ text-shadow: 1px 3px 2px #973AA8;
 }
 
 .container {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr ;
@@ -196,6 +196,7 @@ h3 {
   letter-spacing: 1px;
   font-size: 13px;
   text-align: center;
+  margin-bottom: 2em;
 }
 
 p{
