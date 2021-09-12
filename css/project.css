@@ -166,7 +166,7 @@ video, img {
 
 .desc3 {
   grid-area: description3;
-  margin: 0 2em 0 2em;
+  margin: 0 2em 2em 2em;
   box-shadow: 15px 17px 24px -12px rgba(0,0,0,0.55);
   -webkit-box-shadow: 18px 20px 24px -12px rgba(0,0,0,0.55);
   -moz-box-shadow: 18px 20px 24px -12px rgba(0,0,0,0.55);
@@ -175,7 +175,7 @@ video, img {
 
 .desc4 {
   grid-area: description4;
-  margin: 0 2em 0 2em;
+  margin: 0 2em 2em 2em;
   box-shadow: 15px 17px 24px -12px rgba(0,0,0,0.55);
   -webkit-box-shadow: 18px 20px 24px -12px rgba(0,0,0,0.55);
   -moz-box-shadow: 18px 20px 24px -12px rgba(0,0,0,0.55);
@@ -196,7 +196,6 @@ h3 {
   letter-spacing: 1px;
   font-size: 13px;
   text-align: center;
-  margin-bottom: 2em;
 }
 
 p{
